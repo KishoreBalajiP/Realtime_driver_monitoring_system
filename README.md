@@ -33,14 +33,27 @@ This project is a **Real-Time Driver Monitoring System** designed to enhance roa
 ---
 
 ## 📂 Project Structure
-driver-monitoring/
-│── main.py # Main script for video capture, detection, and alerts
-│── helpers.py # Helper functions (EAR, MAR, alerts, etc.)
-│── requirements.txt # Project dependencies
-│── sounds/ # Alert sound files
-│── detector/ # Modular detection scripts (optional, not used in main.py)
-│── models/ # Pre-trained models (facial landmark predictor)
-│ └── shape_predictor_68_face_landmarks.dat (ignored in git)
+
+```
+realtime_driver_monitoring/
+├── main.py             # Main script for video capture, detection, and alerts
+├── helpers.py          # Helper functions (EAR, MAR, alerts, etc.)
+├── requirements.txt    # Project dependencies
+├── sounds/             # Alert sound files (drowsiness, yawning, distraction)
+├── detector/           # Modular detection scripts (optional, not directly used in main.py)
+├── models/             # Pre-trained models
+│   └── shape_predictor_68_face_landmarks.dat  # Dlib facial landmark model (ignored in git)
+└── .gitignore          # Files and folders to ignore in git
+```
+
+### Notes:
+
+* `main.py`: Main script for video capture, detection, and alerts.
+* `helpers.py`: Utility functions for calculating EAR/MAR and playing alerts.
+* `models/`: Stores pretrained model files. Large `.dat` files should **not** be pushed to GitHub.
+* `sounds/`: Contains alert sound files for drowsiness, yawning, and distraction alerts.
+* `detector/`: Optional modular detection scripts (not directly used in main.py).
+* `.gitignore`: Ensures compiled files, cache, and large binaries are not tracked.
 
 
 ---
