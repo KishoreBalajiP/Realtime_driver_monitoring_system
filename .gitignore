@@ -1,0 +1,16 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dlib model files (large binaries)
+*.dat
+
+# Virtual environments
+venv/
+.env/
+
+# OS-specific
+.DS_Store
+Thumbs.db
