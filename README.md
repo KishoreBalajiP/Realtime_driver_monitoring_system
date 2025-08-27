@@ -81,7 +81,7 @@ pip install C:/complete_path/dlib-<version>-cpXXX-cpXXX-win_amd64.whl
 ### 4. Download Facial Landmark Model
 This project requires dlib's 68-point face landmark predictor. Download it from the official dlib website:
 
-🔗 [shape_predictor_68_face_landmarks.dat.bz2](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
+🔗[Download shape_predictor_68_face_landmarks.dat.bz2](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
 
 
 Then:
