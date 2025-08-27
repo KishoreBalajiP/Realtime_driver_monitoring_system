@@ -61,57 +61,59 @@ realtime_driver_monitoring/
 ## 🛠️ Installation & Setup
 
 ### 1. Clone the Repository
-```bash
+```
 git clone https://github.com/your-username/driver-monitoring.git
 cd driver-monitoring
-
-2. Install Dependencies
+```
+### 2. Install Dependencies
+```
 pip install -r requirements.txt
+```
+### 3. Windows + Python (precompiled dlib wheel required)
+ Download the appropriate dlib wheel for your Python version and system architecture from [Gohlke’s site](https://www.lfd.uci.edu/~gohlke/pythonlibs/#dlib).  
+   - Example for Python 3.11 on 64-bit Windows:  
+     `dlib-19.24.1-cp311-cp311-win_amd64.whl`  
+   - Make sure the `cpXXX` part matches your Python version (`cp310` for 3.10, `cp311` for 3.11, etc.)  
+ Install the wheel explicitly (replace with your actual downloaded file path):
+```
+pip install C:/complete_path/dlib-<version>-cpXXX-cpXXX-win_amd64.whl
+```
+### 4. Download Facial Landmark Model
+This project requires dlib's 68-point face landmark predictor. Download it from the official dlib website:
 
-3. Download Facial Landmark Model
+🔗 [shape_predictor_68_face_landmarks.dat.bz2](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
 
-This project requires dlib's 68-point face landmark predictor.
-Download it from the official dlib website:
-
-🔗 Download shape_predictor_68_face_landmarks.dat
 
 Then:
-
 # Extract the file
+```
 bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
-
+```
 # Move it into models/ directory
+```
 mv shape_predictor_68_face_landmarks.dat models/
-
-▶️ Usage
-
+```
+### ▶️ Usage
+```
 Run the system with:
-
 python main.py
 
-
 Keep your face visible to the webcam.
-
 Alerts will trigger for drowsiness, yawning, or distraction.
+```
 
-📦 Dependencies
-
+### 📦 Dependencies
+```
 opencv-python
-
 dlib
-
 imutils
-
 scipy
-
 pygame
-
 (Installed automatically via requirements.txt)
+```
 
-🚀 Future Improvements
-
+### 🚀 Future Improvements
+```
 Add seat-belt detection.
-
 Integrate with vehicle hardware (e.g., alarm/buzzer).
-
 Extend support for multiple drivers (fleet monitoring).
