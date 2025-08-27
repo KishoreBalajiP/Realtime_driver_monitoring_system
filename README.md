@@ -81,8 +81,8 @@ pip install C:/complete_path/dlib-<version>-cpXXX-cpXXX-win_amd64.whl
 ### 4. Download Facial Landmark Model
 This project requires dlib's 68-point face landmark predictor. Download it from the official dlib website:
 
-🔗[Download shape_predictor_68_face_landmarks.dat.bz2](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
-
+🔗This project requires dlib's 68-point face landmark predictor.  
+Download it from the official site: [http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)  
 
 Then:
 # Extract the file
@@ -97,10 +97,10 @@ mv shape_predictor_68_face_landmarks.dat models/
 ```
 Run the system with:
 python main.py
-
-Keep your face visible to the webcam.
-Alerts will trigger for drowsiness, yawning, or distraction.
 ```
+Keep your face visible to the webcam.<br>
+Alerts will trigger for drowsiness, yawning, or distraction.
+
 
 ### 📦 Dependencies
 ```
@@ -109,11 +109,10 @@ dlib
 imutils
 scipy
 pygame
-(Installed automatically via requirements.txt)
 ```
+(Installed automatically via requirements.txt)
 
 ### 🚀 Future Improvements
-```
-Add seat-belt detection.
-Integrate with vehicle hardware (e.g., alarm/buzzer).
+Add seat-belt detection.<br>
+Integrate with vehicle hardware (e.g., alarm/buzzer).<br>
 Extend support for multiple drivers (fleet monitoring).
